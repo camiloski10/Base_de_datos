@@ -36,6 +36,7 @@ const registrar = async (req, res) => {
     };
 };
 const confirmar = async (req, res) => {
+    const {token}=req.params
     // req.params para leer datos de la URL, en este caso token por que asi lo definimos en la rutaconst { token } = req.params;
     const usuarioConfirmar = await Usuario.findOne({ token });
     // console.log(usuarioConfirmar);
